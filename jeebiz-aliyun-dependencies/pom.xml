@@ -1,0 +1,1254 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.jeebiz</groupId>
+		<artifactId>jeebiz-aliyun-build</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>jeebiz-aliyun-dependencies</artifactId>
+	<packaging>pom</packaging>
+	
+	<properties>
+		<aliyun-sdk-aegis.version>1.0.1</aliyun-sdk-aegis.version>
+		<aliyun-sdk-afs.version>1.0.0</aliyun-sdk-afs.version>
+		<aliyun-sdk-alios-dm.version>1.0.0</aliyun-sdk-alios-dm.version>
+		<aliyun-sdk-alert.version>3.0.3</aliyun-sdk-alert.version>
+		<aliyun-sdk-alidns.version>2.0.6</aliyun-sdk-alidns.version>
+		<aliyun-sdk-arms.version>2.1.0</aliyun-sdk-arms.version>
+		<aliyun-sdk-arms4finance.version>2.0.0</aliyun-sdk-arms4finance.version>
+		<aliyun-sdk-batchcompute.version>5.3.2</aliyun-sdk-batchcompute.version>
+		<aliyun-sdk-bss.version>2.0.0-rc1</aliyun-sdk-bss.version>
+		<aliyun-sdk-bssopenapi.version>1.0.2</aliyun-sdk-bssopenapi.version>
+		<aliyun-sdk-billing.version>1.0.0</aliyun-sdk-billing.version>
+		<aliyun-sdk-cas.version>2.0.0713</aliyun-sdk-cas.version>
+		<aliyun-sdk-cbn.version>1.0.1</aliyun-sdk-cbn.version>
+		<aliyun-sdk-cds.version>1.8.1</aliyun-sdk-cds.version>
+		<aliyun-sdk-ccc.version>1.0.8</aliyun-sdk-ccc.version>
+		<aliyun-sdk-cdn.version>2.8.0</aliyun-sdk-cdn.version>
+		<aliyun-sdk-cf.version>2.6.0</aliyun-sdk-cf.version>
+		<aliyun-sdk-core.version>4.1.2</aliyun-sdk-core.version>
+		<aliyun-sdk-core-inner.version>3.0.2</aliyun-sdk-core-inner.version>
+		<aliyun-sdk-chatbot.version>1.1.0</aliyun-sdk-chatbot.version>
+		<aliyun-sdk-commondriver.version>2.0.0</aliyun-sdk-commondriver.version>
+		<aliyun-sdk-cloudapi.version>4.7.0</aliyun-sdk-cloudapi.version>
+		<aliyun-sdk-cloudauth.version>1.1.4</aliyun-sdk-cloudauth.version>
+		<aliyun-sdk-clouddesktop.version>1.1.0</aliyun-sdk-clouddesktop.version>
+		<aliyun-sdk-cloudfw.version>1.0.0</aliyun-sdk-cloudfw.version>
+		<aliyun-sdk-cloudwf.version>1.0.2</aliyun-sdk-cloudwf.version>
+		<aliyun-sdk-cloudphoto.version>1.1.18</aliyun-sdk-cloudphoto.version>
+		<aliyun-sdk-cms.version>6.0.16</aliyun-sdk-cms.version>
+		<aliyun-sdk-cr.version>3.0.0</aliyun-sdk-cr.version>
+		<aliyun-sdk-cs.version>2.9.0</aliyun-sdk-cs.version>
+		<aliyun-sdk-csb.version>1.1.6</aliyun-sdk-csb.version>
+		<aliyun-sdk-datahub.version>2.9.2-public</aliyun-sdk-datahub.version>
+		<aliyun-sdk-dataworks.version>3.0.1</aliyun-sdk-dataworks.version>
+		<aliyun-sdk-dataworks-public.version>1.8.3</aliyun-sdk-dataworks-public.version>
+		<aliyun-sdk-dcdn.version>1.0.0</aliyun-sdk-dcdn.version>
+		<aliyun-sdk-ddosbgp.version>1.0.0</aliyun-sdk-ddosbgp.version>
+		<aliyun-sdk-ddoscoo.version>1.1.0</aliyun-sdk-ddoscoo.version>
+		<aliyun-sdk-ddospro.version>2.0.3</aliyun-sdk-ddospro.version>
+		<aliyun-sdk-dds.version>2.0.1</aliyun-sdk-dds.version>
+		<aliyun-sdk-dm.version>3.3.1</aliyun-sdk-dm.version>
+		<aliyun-sdk-domain.version>3.6.0</aliyun-sdk-domain.version>
+		<aliyun-sdk-domain-intl.version>1.2.0</aliyun-sdk-domain-intl.version>
+		<aliyun-sdk-drds.version>2.5.1</aliyun-sdk-drds.version>
+		<aliyun-sdk-drcloud.version>1.0.0</aliyun-sdk-drcloud.version>
+		<aliyun-sdk-dts.version>2.0.7</aliyun-sdk-dts.version>
+		<aliyun-sdk-dysmsapi.version>1.1.0</aliyun-sdk-dysmsapi.version>
+		<aliyun-sdk-dypnsapi.version>1.0.1</aliyun-sdk-dypnsapi.version>
+		<aliyun-sdk-dyvmsapi.version>1.1.1</aliyun-sdk-dyvmsapi.version>
+		<aliyun-sdk-ecs.version>4.12.0</aliyun-sdk-ecs.version>
+		<aliyun-sdk-edas.version>2.16.0</aliyun-sdk-edas.version>
+		<aliyun-sdk-ehpc.version>1.7.0</aliyun-sdk-ehpc.version>
+		<aliyun-sdk-emr.version>2.3.3</aliyun-sdk-emr.version>
+		<aliyun-sdk-ess.version>2.2.6</aliyun-sdk-ess.version>
+		<aliyun-sdk-fc.version>1.2.0</aliyun-sdk-fc.version>
+		<aliyun-sdk-ft.version>2018-07-13</aliyun-sdk-ft.version>
+		<aliyun-sdk-finmall.version>1.0.0</aliyun-sdk-finmall.version>
+		<aliyun-sdk-gpdb.version>1.0.0</aliyun-sdk-gpdb.version>
+		<aliyun-sdk-green.version>3.3.1</aliyun-sdk-green.version>
+		<aliyun-sdk-hpc.version>2.0.1</aliyun-sdk-hpc.version>
+		<aliyun-sdk-highddos.version>2.1.0</aliyun-sdk-highddos.version>
+		<aliyun-sdk-httpdns.version>2.1.0</aliyun-sdk-httpdns.version>
+		<aliyun-sdk-hsm.version>1.0.0</aliyun-sdk-hsm.version>
+		<aliyun-sdk-imagesearch.version>1.0.4</aliyun-sdk-imagesearch.version>
+		<aliyun-sdk-imm.version>1.7.4</aliyun-sdk-imm.version>
+		<aliyun-sdk-ims.version>1.0.0</aliyun-sdk-ims.version>
+		<aliyun-sdk-nas.version>3.1.2</aliyun-sdk-nas.version>
+		<aliyun-sdk-nhcil-imagecut.version>1.0.0</aliyun-sdk-nhcil-imagecut.version>
+		<aliyun-sdk-itaas.version>1.0.0</aliyun-sdk-itaas.version>
+		<aliyun-sdk-jarvis.version>1.2.3</aliyun-sdk-jarvis.version>
+		<aliyun-sdk-jarvis-public.version>1.0.0</aliyun-sdk-jarvis-public.version>
+		<aliyun-sdk-jaq.version>2.0.5</aliyun-sdk-jaq.version>
+		<aliyun-sdk-market.version>2.0.13</aliyun-sdk-market.version>
+		<aliyun-sdk-market-inner.version>2.0.9</aliyun-sdk-market-inner.version>
+		<aliyun-sdk-marianadatacenter.version>2.0.0</aliyun-sdk-marianadatacenter.version>
+		<aliyun-sdk-mts.version>2.6.0</aliyun-sdk-mts.version>
+		<aliyun-sdk-mopen.version>1.1.0</aliyun-sdk-mopen.version>
+		<aliyun-sdk-oceanbase.version>2016.02.29</aliyun-sdk-oceanbase.version>
+		<aliyun-sdk-ocs.version>2.0.0-rc1</aliyun-sdk-ocs.version>
+		<aliyun-sdk-oms.version>2.0.1</aliyun-sdk-oms.version>
+		<aliyun-sdk-openanalytics-open.version>1.0.2</aliyun-sdk-openanalytics-open.version>
+		<aliyun-sdk-oss.version>3.3.0</aliyun-sdk-oss.version>
+		<aliyun-sdk-ossadmin.version>2.0.0</aliyun-sdk-ossadmin.version>
+		<aliyun-sdk-petadata.version>1.1.0</aliyun-sdk-petadata.version>
+		<aliyun-sdk-phoenixsp-inner.version>2.1.6</aliyun-sdk-phoenixsp-inner.version>
+		<aliyun-sdk-polardb.version>1.1.0</aliyun-sdk-polardb.version>
+		<aliyun-sdk-push.version>3.10.0</aliyun-sdk-push.version>
+		<aliyun-sdk-pvtz.version>1.0.0</aliyun-sdk-pvtz.version>
+		<aliyun-sdk-qualitycheck.version>2.8.3</aliyun-sdk-qualitycheck.version>
+		<aliyun-sdk-rdc.version>1.4.0</aliyun-sdk-rdc.version>
+		<aliyun-sdk-r-kvstore.version>2.0.3</aliyun-sdk-r-kvstore.version>
+		<aliyun-sdk-sas-api.version>2.1.0</aliyun-sdk-sas-api.version>
+		<aliyun-sdk-saf.version>1.0.0</aliyun-sdk-saf.version>
+		<aliyun-sdk-scdn.version>1.0.0</aliyun-sdk-scdn.version>
+		<aliyun-sdk-smartag.version>1.2.0</aliyun-sdk-smartag.version>
+		<aliyun-sdk-sms.version>3.0.0-rc1</aliyun-sdk-sms.version>
+		<aliyun-sdk-snsuapi.version>1.7.0</aliyun-sdk-snsuapi.version>
+		<aliyun-sdk-teslamaxcompute.version>1.5.4</aliyun-sdk-teslamaxcompute.version>
+		<aliyun-sdk-tesladam.version>1.0.1</aliyun-sdk-tesladam.version>
+		<aliyun-sdk-teslastream.version>1.0.0</aliyun-sdk-teslastream.version>
+		<aliyun-sdk-trademark.version>1.0.0</aliyun-sdk-trademark.version>
+		<aliyun-sdk-ons.version>2.1.1</aliyun-sdk-ons.version>
+		<aliyun-sdk-lubanruler.version>1.0.0</aliyun-sdk-lubanruler.version>
+		<aliyun-sdk-linkedmall.version>1.0.0</aliyun-sdk-linkedmall.version>
+		<aliyun-sdk-linkface.version>1.1.1</aliyun-sdk-linkface.version>
+		<aliyun-sdk-live.version>3.7.1</aliyun-sdk-live.version>
+		<aliyun-sdk-lx.version>1.0.26</aliyun-sdk-lx.version>
+		<aliyun-sdk-ram.version>3.0.0</aliyun-sdk-ram.version>
+		<aliyun-sdk-rdc-inner.version>1.0.13</aliyun-sdk-rdc-inner.version>
+		<aliyun-sdk-rds.version>2.1.9</aliyun-sdk-rds.version>
+		<aliyun-sdk-rtc.version>1.0.0</aliyun-sdk-rtc.version>
+		<aliyun-sdk-ros.version>2.2.6</aliyun-sdk-ros.version>
+		<aliyun-sdk-sts.version>3.0.0</aliyun-sdk-sts.version>
+		<aliyun-sdk-slb.version>3.2.7</aliyun-sdk-slb.version>
+		<aliyun-sdk-idccommondata.version>1.0.0</aliyun-sdk-idccommondata.version>
+		<aliyun-sdk-idst.version>1.0.0</aliyun-sdk-idst.version>
+		<aliyun-sdk-iot.version>6.0.0</aliyun-sdk-iot.version>
+		<aliyun-sdk-kpm.version>1.0.0</aliyun-sdk-kpm.version>
+		<aliyun-sdk-kms.version>2.5.0</aliyun-sdk-kms.version>
+		<aliyun-sdk-ubsms.version>2.0.4</aliyun-sdk-ubsms.version>
+		<aliyun-sdk-vod.version>2.11.5</aliyun-sdk-vod.version>
+		<aliyun-sdk-vpc.version>3.0.3</aliyun-sdk-vpc.version>
+		<aliyun-sdk-waf.version>2.0.0</aliyun-sdk-waf.version>
+		<aliyun-sdk-waf-openapi.version>3.1.0</aliyun-sdk-waf-openapi.version>
+		<aliyun-sdk-xinandata.version>1.0.1</aliyun-sdk-xinandata.version>
+		<aliyun-sdk-yundun.version>2.1.3</aliyun-sdk-yundun.version>
+		<aliyun-sdk-yundun-bastionhost.version>1.0.0</aliyun-sdk-yundun-bastionhost.version>
+		<aliyun-sdk-zhuque.version>1.0.6</aliyun-sdk-zhuque.version>
+		<aliyun-hitsdb-client.version>0.0.14</aliyun-hitsdb-client.version>
+		<aliyun-ons-client.version>1.7.8.Final</aliyun-ons-client.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+		
+			<!-- Aliyun Java SDK Aegis -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-aegis -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-aegis</artifactId>
+			    <version>${aliyun-sdk-aegis.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK AFS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-afs -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-afs</artifactId>
+			    <version>${aliyun-sdk-afs.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Alios DM -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-alios-dm -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-alios-dm</artifactId>
+			    <version>${aliyun-sdk-alios-dm.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Alert -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-alert -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-alert</artifactId>
+			    <version>${aliyun-sdk-alert.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Alidns -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-alidns -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-alidns</artifactId>
+			    <version>${aliyun-sdk-alidns.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Arms -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-arms -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-arms</artifactId>
+			    <version>${aliyun-sdk-arms.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Arms4finance -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-arms4finance -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-arms4finance</artifactId>
+			    <version>${aliyun-sdk-arms4finance.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Batchcompute -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-batchcompute -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-batchcompute</artifactId>
+			    <version>${aliyun-sdk-batchcompute.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK BSS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-bss -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-bss</artifactId>
+			    <version>${aliyun-sdk-bss.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Bssopenapi -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-bssopenapi -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-bssopenapi</artifactId>
+			    <version>${aliyun-sdk-bssopenapi.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Billing -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-billing -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-billing</artifactId>
+			    <version>${aliyun-sdk-billing.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CAS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cas -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cas</artifactId>
+			    <version>${aliyun-sdk-cas.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Cbn -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cbn -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cbn</artifactId>
+			    <version>${aliyun-sdk-cbn.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CDS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cds -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cds</artifactId>
+			    <version>${aliyun-sdk-cds.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ccc -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ccc -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ccc</artifactId>
+			    <version>${aliyun-sdk-ccc.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CDN -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cdn -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cdn</artifactId>
+			    <version>${aliyun-sdk-cdn.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Cf -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cf -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cf</artifactId>
+			    <version>${aliyun-sdk-cf.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Core -->
+			
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-core</artifactId>
+			    <version>${aliyun-sdk-core.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Core Inner -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core-inner -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-core-inner</artifactId>
+			    <version>${aliyun-sdk-core-inner.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK ChatBot -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-chatbot -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-chatbot</artifactId>
+			    <version>${aliyun-sdk-chatbot.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Commondriver -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-commondriver -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-commondriver</artifactId>
+			    <version>${aliyun-sdk-commondriver.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CloudAPI -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cloudapi -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cloudapi</artifactId>
+			    <version>${aliyun-sdk-cloudapi.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Cloudauth -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cloudauth -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cloudauth</artifactId>
+			    <version>${aliyun-sdk-cloudauth.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Clouddesktop -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-clouddesktop -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-clouddesktop</artifactId>
+			    <version>${aliyun-sdk-clouddesktop.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Cloudfw -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cloudfw -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cloudfw</artifactId>
+			    <version>${aliyun-sdk-cloudfw.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Cloudwf -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cloudwf -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cloudwf</artifactId>
+			    <version>${aliyun-sdk-cloudwf.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Cloudphoto -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cloudphoto -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cloudphoto</artifactId>
+			    <version>${aliyun-sdk-cloudphoto.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CMS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cms -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cms</artifactId>
+			    <version>${aliyun-sdk-cms.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CR -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cr -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cr</artifactId>
+			    <version>${aliyun-sdk-cr.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-cs -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-cs</artifactId>
+			    <version>${aliyun-sdk-cs.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK CSB -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-csb -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-csb</artifactId>
+			    <version>${aliyun-sdk-csb.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Dataworks -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dataworks -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dataworks</artifactId>
+			    <version>${aliyun-sdk-dataworks.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Dataworks Public -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dataworks-public -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dataworks-public</artifactId>
+			    <version>${aliyun-sdk-dataworks-public.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Dcdn -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dcdn -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dcdn</artifactId>
+			    <version>${aliyun-sdk-dcdn.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ddosbgp -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ddosbgp -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ddosbgp</artifactId>
+			    <version>${aliyun-sdk-ddosbgp.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ddoscoo -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ddoscoo -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ddoscoo</artifactId>
+			    <version>${aliyun-sdk-ddoscoo.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ddospro -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ddospro -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ddospro</artifactId>
+			    <version>${aliyun-sdk-ddospro.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK DDS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dds -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dds</artifactId>
+			    <version>${aliyun-sdk-dds.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK DM -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dm -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dm</artifactId>
+			    <version>${aliyun-sdk-dm.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Domain -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-domain -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-domain</artifactId>
+			    <version>${aliyun-sdk-domain.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Domain Intl -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-domain-intl -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-domain-intl</artifactId>
+			    <version>${aliyun-sdk-domain-intl.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Drds -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-drds -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-drds</artifactId>
+			    <version>${aliyun-sdk-drds.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Drcloud -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-drcloud -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-drcloud</artifactId>
+			    <version>${aliyun-sdk-drcloud.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK DTS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dts -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dts</artifactId>
+			    <version>${aliyun-sdk-dts.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Dysmsapi -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dysmsapi -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+			    <version>${aliyun-sdk-dysmsapi.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Dypnsapi -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dypnsapi -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dypnsapi</artifactId>
+			    <version>${aliyun-sdk-dypnsapi.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Dyvmsapi -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dyvmsapi -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-dyvmsapi</artifactId>
+			    <version>${aliyun-sdk-dyvmsapi.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK ECS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ecs -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ecs</artifactId>
+			    <version>${aliyun-sdk-ecs.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Edas -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-edas -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-edas</artifactId>
+			    <version>${aliyun-sdk-edas.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ehpc -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ehpc -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ehpc</artifactId>
+			    <version>${aliyun-sdk-ehpc.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK EMR -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-emr -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-emr</artifactId>
+			    <version>${aliyun-sdk-emr.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK ESS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ess -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ess</artifactId>
+			    <version>${aliyun-sdk-ess.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK FC -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-fc -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-fc</artifactId>
+			    <version>${aliyun-sdk-fc.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ft -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ft -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ft</artifactId>
+			    <version>${aliyun-sdk-ft.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Finmall -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-finmall -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-finmall</artifactId>
+			    <version>${aliyun-sdk-finmall.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Gpdb -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-gpdb -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-gpdb</artifactId>
+			    <version>${aliyun-sdk-gpdb.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Green -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-green -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-green</artifactId>
+			    <version>${aliyun-sdk-green.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK HPC -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-hpc -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-hpc</artifactId>
+			    <version>${aliyun-sdk-hpc.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Highddos -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-highddos -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-highddos</artifactId>
+			    <version>${aliyun-sdk-highddos.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK HttpDNS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-httpdns -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-httpdns</artifactId>
+			    <version>${aliyun-sdk-httpdns.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK HSM -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-hsm -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-hsm</artifactId>
+			    <version>${aliyun-sdk-hsm.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK ImageSearch -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-imagesearch -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-imagesearch</artifactId>
+			    <version>${aliyun-sdk-imagesearch.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK IMM -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-imm -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-imm</artifactId>
+			    <version>${aliyun-sdk-imm.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK IMS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ims -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ims</artifactId>
+			    <version>${aliyun-sdk-ims.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK NAs -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-nas -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-nas</artifactId>
+			    <version>${aliyun-sdk-nas.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Nhcil Imagecut -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-nhcil-imagecut -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-nhcil-imagecut</artifactId>
+			    <version>${aliyun-sdk-nhcil-imagecut.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Itaas -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-itaas -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-itaas</artifactId>
+			    <version>${aliyun-sdk-itaas.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Jarvis -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-jarvis -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-jarvis</artifactId>
+			    <version>${aliyun-sdk-jarvis.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Jarvis Public -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-jarvis-public -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-jarvis-public</artifactId>
+			    <version>${aliyun-sdk-jarvis-public.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Jaq -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-jaq -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-jaq</artifactId>
+			    <version>${aliyun-sdk-jaq.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Market -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-market -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-market</artifactId>
+			    <version>${aliyun-sdk-market.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Market Inner -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-market-inner -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-market-inner</artifactId>
+			    <version>${aliyun-sdk-market-inner.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Marianadatacenter -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-marianadatacenter -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-marianadatacenter</artifactId>
+			    <version>${aliyun-sdk-marianadatacenter.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Mts -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-mts -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-mts</artifactId>
+			    <version>${aliyun-sdk-mts.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Mopen -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-mopen -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-mopen</artifactId>
+			    <version>${aliyun-sdk-mopen.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Oceanbase -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-oceanbase -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-oceanbase</artifactId>
+			    <version>${aliyun-sdk-oceanbase.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK OCS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ocs -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ocs</artifactId>
+			    <version>${aliyun-sdk-ocs.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK OMS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-oms -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-oms</artifactId>
+			    <version>${aliyun-sdk-oms.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK OpenAnalytics Open -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-openanalytics-open -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-openanalytics-open</artifactId>
+			    <version>${aliyun-sdk-openanalytics-open.version}</version>
+			</dependency>
+			
+			<!-- The Aliyun OSS SDK for Java used for accessing Aliyun Object Storage Service  -->						
+			<!-- https://mvnrepository.com/artifact/com.aliyun.oss/aliyun-sdk-oss -->
+			<dependency>
+			    <groupId>com.aliyun.oss</groupId>
+			    <artifactId>aliyun-sdk-oss</artifactId>
+			    <version>${aliyun-sdk-oss.version}</version>
+			</dependency>
+			<!-- Aliyun Java SDK Ossadmin -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ossadmin -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ossadmin</artifactId>
+			    <version>${aliyun-sdk-ossadmin.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Petadata -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-petadata -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-petadata</artifactId>
+			    <version>${aliyun-sdk-petadata.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Phoenixsp Inner -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-phoenixsp-inner -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-phoenixsp-inner</artifactId>
+			    <version>${aliyun-sdk-phoenixsp-inner.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Polardb -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-polardb -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-polardb</artifactId>
+			    <version>${aliyun-sdk-polardb.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Push -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-push -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-push</artifactId>
+			    <version>${aliyun-sdk-push.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Pvtz -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-pvtz -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-pvtz</artifactId>
+			    <version>${aliyun-sdk-pvtz.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Qualitycheck -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-qualitycheck -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-qualitycheck</artifactId>
+			    <version>${aliyun-sdk-qualitycheck.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK RDC -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-rdc -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-rdc</artifactId>
+			    <version>${aliyun-sdk-rdc.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK R KVStore -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-r-kvstore -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-r-kvstore</artifactId>
+			    <version>${aliyun-sdk-r-kvstore.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK SAS API -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-sas-api -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-sas-api</artifactId>
+			    <version>${aliyun-sdk-sas-api.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK SAF -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-saf -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-saf</artifactId>
+			    <version>${aliyun-sdk-saf.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Scdn -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-scdn -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-scdn</artifactId>
+			    <version>${aliyun-sdk-scdn.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Smartag -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-smartag -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-smartag</artifactId>
+			    <version>${aliyun-sdk-smartag.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK SMS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-sms -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-sms</artifactId>
+			    <version>${aliyun-sdk-sms.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Snsuapi -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-snsuapi -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-snsuapi</artifactId>
+			    <version>${aliyun-sdk-snsuapi.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Teslamaxcompute -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-teslamaxcompute -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-teslamaxcompute</artifactId>
+			    <version>${aliyun-sdk-teslamaxcompute.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Tesladam -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-tesladam -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-tesladam</artifactId>
+			    <version>${aliyun-sdk-tesladam.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Teslastream -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-teslastream -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-teslastream</artifactId>
+			    <version>${aliyun-sdk-teslastream.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Trademark -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-trademark -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-trademark</artifactId>
+			    <version>${aliyun-sdk-trademark.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ons -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ons -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ons</artifactId>
+			    <version>${aliyun-sdk-ons.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Lubanruler -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-lubanruler -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-lubanruler</artifactId>
+			    <version>${aliyun-sdk-lubanruler.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Linkedmall -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-linkedmall -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-linkedmall</artifactId>
+			    <version>${aliyun-sdk-linkedmall.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Linkface -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-linkface -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-linkface</artifactId>
+			    <version>${aliyun-sdk-linkface.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Live -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-live -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-live</artifactId>
+			    <version>${aliyun-sdk-live.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Lx -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-lx -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-lx</artifactId>
+			    <version>${aliyun-sdk-lx.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK RAM -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ram -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ram</artifactId>
+			    <version>${aliyun-sdk-ram.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK RDC Inner -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-rdc-inner -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-rdc-inner</artifactId>
+			    <version>${aliyun-sdk-rdc-inner.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK RDS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-rds -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-rds</artifactId>
+			    <version>${aliyun-sdk-rds.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK RTC -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-rtc -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-rtc</artifactId>
+			    <version>${aliyun-sdk-rtc.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK ROS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ros -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ros</artifactId>
+			    <version>${aliyun-sdk-ros.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK STS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-sts -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-sts</artifactId>
+			    <version>${aliyun-sdk-sts.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK SLB -->
+			
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-slb -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-slb</artifactId>
+			    <version>${aliyun-sdk-slb.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Idccommondata -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-idccommondata -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-idccommondata</artifactId>
+			    <version>${aliyun-sdk-idccommondata.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Idst -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-idst -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-idst</artifactId>
+			    <version>${aliyun-sdk-idst.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK IoT -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-iot -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-iot</artifactId>
+			    <version>${aliyun-sdk-iot.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK KPM -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-kpm -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-kpm</artifactId>
+			    <version>${aliyun-sdk-kpm.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK KMS -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-kms -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-kms</artifactId>
+			    <version>${aliyun-sdk-kms.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Ubsms -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-ubsms -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-ubsms</artifactId>
+			    <version>${aliyun-sdk-ubsms.version}</version>
+			</dependency>
+						
+			<!-- Aliyun Java SDK Vod -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-vod -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-vod</artifactId>
+			    <version>${aliyun-sdk-vod.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK VPC -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-vpc -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-vpc</artifactId>
+			    <version>${aliyun-sdk-vpc.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK WAF -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-waf -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-waf</artifactId>
+			    <version>${aliyun-sdk-waf.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK WAF OpenAPI -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-waf-openapi -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-waf-openapi</artifactId>
+			    <version>${aliyun-sdk-waf-openapi.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Xinandata -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-xinandata -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-xinandata</artifactId>
+			    <version>${aliyun-sdk-xinandata.version}</version>
+			</dependency>
+			
+			
+			
+			<!-- Aliyun Java SDK Yundun -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-yundun -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-yundun</artifactId>
+			    <version>${aliyun-sdk-yundun.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Yundun Bastionhost -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-yundun-bastionhost -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-yundun-bastionhost</artifactId>
+			    <version>${aliyun-sdk-yundun-bastionhost.version}</version>
+			</dependency>
+			
+			<!-- Aliyun Java SDK Zhuque -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-zhuque -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>aliyun-java-sdk-zhuque</artifactId>
+			    <version>${aliyun-sdk-zhuque.version}</version>
+			</dependency>
+				
+			<!-- HiTSDB Client SDK -->
+			<!-- https://mvnrepository.com/artifact/com.aliyun/hitsdb-client -->
+			<dependency>
+			    <groupId>com.aliyun</groupId>
+			    <artifactId>hitsdb-client</artifactId>
+			    <version>${aliyun-hitsdb-client.version}</version>
+			</dependency>
+					
+			<!-- Aliyun HBase -->
+			
+			
+			<!-- Aliyun Openservices -->
+			
+			<!-- https://mvnrepository.com/artifact/com.aliyun.openservices/ons-client -->
+			<dependency>
+			    <groupId>com.aliyun.openservices</groupId>
+			    <artifactId>ons-client</artifactId>
+			    <version>${aliyun-ons-client.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.aliyun.openservices/aliyun-log -->
+			<dependency>
+			    <groupId>com.aliyun.openservices</groupId>
+			    <artifactId>aliyun-log</artifactId>
+			    <version>0.6.24</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.aliyun.openservices/log-loghub-producer -->
+			<dependency>
+			    <groupId>com.aliyun.openservices</groupId>
+			    <artifactId>log-loghub-producer</artifactId>
+			    <version>0.1.15</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.aliyun.openservices/loghub-client-lib -->
+			<dependency>
+			    <groupId>com.aliyun.openservices</groupId>
+			    <artifactId>loghub-client-lib</artifactId>
+			    <version>0.6.15</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.aliyun.openservices/aliyun-log-log4j-appender -->
+			<dependency>
+			    <groupId>com.aliyun.openservices</groupId>
+			    <artifactId>aliyun-log-log4j-appender</artifactId>
+			    <version>0.1.10</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.aliyun.openservices/aliyun-log-log4j2-appender -->
+			<dependency>
+			    <groupId>com.aliyun.openservices</groupId>
+			    <artifactId>aliyun-log-log4j2-appender</artifactId>
+			    <version>0.1.10</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.aliyun.openservices/tablestore -->
+			<dependency>
+			    <groupId>com.aliyun.openservices</groupId>
+			    <artifactId>tablestore</artifactId>
+			    <version>4.7.1</version>
+			</dependency>
+			
+			<!-- Aliyun Ams -->
+			
+			<!-- Aliyun IoT -->
+			
+			<!-- Aliyun Alink -->
+			
+			<!-- Aliyun OSS -->
+			
+			<!-- Aliyun ODPS -->
+			
+			<!-- Aliyun Dpa -->
+			
+			<!-- Aliyun EMR -->
+			
+			<!-- Aliyun MNS -->
+			
+			<!-- Aliyun Phoenix -->
+			
+			<!-- Aliyun Angelia -->
+			
+			<!-- Aliyun DTS -->
+			
+			<!-- Aliyun Relay -->
+			
+			<!-- Aliyun DRC -->
+			
+			<!-- Aliyun Datahub -->
+			
+			<!-- https://mvnrepository.com/artifact/com.aliyun.datahub/aliyun-sdk-datahub -->
+			<dependency>
+			    <groupId>com.aliyun.datahub</groupId>
+			    <artifactId>aliyun-sdk-datahub</artifactId>
+			    <version>${aliyun-sdk-datahub.version}</version>
+			</dependency>
+			
+		</dependencies>
+	</dependencyManagement>
+	
+</project>
